@@ -325,11 +325,11 @@ int main() {
         cout << "7 - Exit" << endl;
         cout << "Enter your choice: ";
 
-        // Input validation for menu choice
+        
         string input;
         cin >> input;
 
-        // Check if the input is a valid number
+        
         bool validInput = true;
         for (char c : input) {
             if (!isdigit(c)) {
@@ -339,13 +339,13 @@ int main() {
         }
 
         if (validInput) {
-            choice = 0; // Initialize choice
+            choice = 0; 
             for (char c : input) {
-                choice = choice * 10 + (c - '0'); // Convert string to integer manually
+                choice = choice * 10 + (c - '0'); 
             }
         } else {
             cout << "Invalid choice! Please enter a number." << endl;
-            continue; // Skip the rest of the loop and prompt again
+            continue; 
         }
 
         switch (choice) {
